@@ -1,6 +1,7 @@
 package StudyAidProject;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CardList {
     private ArrayList<FlashCard> cards;
@@ -54,5 +55,27 @@ public class CardList {
 
     public void removeCard(FlashCard removeCard) {
         cards.removeIf(card -> card.getQuestion().equals(removeCard.getQuestion()));
+    }
+
+    public void makeCardList() {
+        System.out.println("How many questions?");
+        Scanner scanner = new Scanner(System.in);
+        int questionNum = scanner.nextInt();
+        int i = 0;
+        while (i < questionNum) {
+            System.out.println("Input the next question.");
+            String question = scanner.nextLine();
+            System.out.println("Input the answer.");
+            String answer = scanner.nextLine();
+            System.out.println("What subject is this question?");
+            String subject = scanner.nextLine();
+            FlashCard flashCard = new FlashCard(question, answer, subject);
+            if (!contains(flashCard)) {
+                addCard(flashCard);
+                i++;
+            } else {
+                System.out.println("This flashcard is already added!");
+            }
+        }
     }
 }

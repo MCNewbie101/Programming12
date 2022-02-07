@@ -1,5 +1,7 @@
 package StudyAidProject;
 
+import java.util.Scanner;
+
 public class StudyAidMain {
     public static void main(String[] args) {
         CardList questionSet1 = new CardList();
@@ -14,8 +16,11 @@ public class StudyAidMain {
 //        questionSet1.addCard(card3);
 //        questionSet1.addCard(card4);
 //        questionSet1.addCard(card1);
-//        Quiz quiz1 = new Quiz(5);
-//        quiz1.generateQuiz(questionSet1);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many questions?");
+        Quiz quiz1 = new Quiz(scanner.nextInt());
+        quiz1.generateQuiz(questionSet1);
+        quiz1.startQuiz();
 //        Quiz quiz2 = new Quiz(4);
 //        quiz2.generateQuiz(questionSet1);
 //        quiz2.startQuiz();

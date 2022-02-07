@@ -17,7 +17,7 @@ public class StudyAidMain {
 //        questionSet1.addCard(card4);
 //        questionSet1.addCard(card1);
         Scanner scanner = new Scanner(System.in);
-        System.out.println("How many questions?");
+        System.out.println("How many questions to get quized on?");
         Quiz quiz1 = new Quiz(scanner.nextInt());
         quiz1.generateQuiz(questionSet1);
         quiz1.startQuiz();

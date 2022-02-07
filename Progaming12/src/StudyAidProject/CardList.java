@@ -61,6 +61,7 @@ public class CardList {
         System.out.println("How many questions?");
         Scanner scanner = new Scanner(System.in);
         int questionNum = scanner.nextInt();
+        String temp = scanner.nextLine();
         int i = 0;
         while (i < questionNum) {
             System.out.println("Input the next question.");

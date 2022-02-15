@@ -5,10 +5,16 @@ public class Triangle extends TwoDShape implements Rotate {
     double side2;
     double side3;
 
+    /*
+     * Takes positive or zero width and height, plus a color.
+     */
     public Triangle(double width, double height, Color color) {
         super(width, height, color);
     }
 
+    /*
+     * Takes three positive numbers, plus a color.
+     */
     public Triangle(double side1, double side2, double side3, Color color) {
         super(side3, 0, color);
         this.side1 = side1;
@@ -17,12 +23,19 @@ public class Triangle extends TwoDShape implements Rotate {
         setHeight(heronsHeight());
     }
 
+    /*
+     * Calculate height using sides.
+     */
+
     private double  heronsHeight() {
         double s = (side1 + side2 + side3) / 2;
         double a = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
         return a * 2 / side3;
     }
 
+    /*
+     * Returns area of triangle.
+     */
     @Override
     public double getArea() {
         return height * width / 2;

@@ -5,7 +5,7 @@ public abstract class TwoDShape {
     double height;
     enum Color {
         RED, GREEN, BLUE, BLACK, WHITE, YELLOW, ORANGE, PURPLE, ANEMO, NONE
-    };
+    }
     Color color;
 
     public TwoDShape(double width, double height, Color color) {

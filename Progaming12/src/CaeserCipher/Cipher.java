@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/*
+ * Creates a plain text alphabet and cipher alphabet set.
+ * Use this set to decrypt or encrypt strings.
+ */
+
 public class Cipher {
     HashMap<Character, Character> alphabet;
 

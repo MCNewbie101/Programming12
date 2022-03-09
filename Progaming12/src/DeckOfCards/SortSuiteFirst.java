@@ -2,12 +2,15 @@ package DeckOfCards;
 
 import java.util.Comparator;
 
+/*
+ * Sets up a comparator.
+ *
+ * If the first input is larger, return 1.
+ * If the inputs are the same, return 0.
+ * If the second input is larger, return -1.
+ */
+
 public class SortSuiteFirst implements Comparator {
-    /*
-     * If the first input is larger, return 1.
-     * If the inputs are the same, return 0.
-     * If the second input is larger, return -1.
-     */
     @Override
     public int compare(Object o1, Object o2) {
         if (o1 instanceof Card && o2 instanceof Card) {

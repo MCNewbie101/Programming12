@@ -3,6 +3,9 @@ package DeckOfCards;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/*
+ * Sets up a deck or a hand.
+ */
 
 public class Deck {
     private int cardNum;

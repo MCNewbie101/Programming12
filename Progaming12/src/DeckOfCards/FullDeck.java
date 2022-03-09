@@ -2,6 +2,10 @@ package DeckOfCards;
 
 import java.util.ArrayList;
 
+/*
+ * Sets up a complete deck.
+ */
+
 public class FullDeck extends Deck{
     public FullDeck() {
         super(52, new ArrayList<>());

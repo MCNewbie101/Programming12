@@ -1,5 +1,9 @@
 package DeckOfCards;
 
+/*
+ * Sets up a card.
+ */
+
 public class Card {
     enum Suite {
         SPADES, HEARTS, CLUBS, DIAMONDS

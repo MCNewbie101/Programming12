@@ -3,9 +3,9 @@ package Rings;
 import java.util.ArrayList;
 
 public class Rings {
-    private ArrayList<Integer> pole1 = new ArrayList<Integer>();
-    private ArrayList<Integer> pole2 = new ArrayList<Integer>();
-    private ArrayList<Integer> pole3 = new ArrayList<Integer>();
+    private ArrayList<Integer> pole1 = new ArrayList<>();
+    private ArrayList<Integer> pole2 = new ArrayList<>();
+    private ArrayList<Integer> pole3 = new ArrayList<>();
     public Rings(int rings) {
         for (int i = 1; i <= rings; i++) {
             pole1.add(i);

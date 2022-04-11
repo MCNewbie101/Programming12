@@ -15,12 +15,12 @@ public class MergeSort {
                 continue;
             }
             if (i2 >= arr2.length) {
-                result[i] = arr2[i1];
+                result[i] = arr1[i1];
                 i1++;
                 continue;
             }
             if (arr1[i1] < arr2[i2]) {
-                result[i1] = arr1[i1];
+                result[i] = arr1[i1];
                 i1++;
             } else  {
                 result[i] = arr2[i2];

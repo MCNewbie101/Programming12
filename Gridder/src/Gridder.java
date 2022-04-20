@@ -939,12 +939,25 @@ public class Gridder extends javax.swing.JFrame
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         System.out.println("8");
-
+        for (int i = 0; i < gridCount; i++) {
+            int temp = grid[0][i];
+            for (int i1 = 0; i1 < gridCount - 1; i1++) {
+                grid[i1][i] = grid[i1 + 1][i];
+            }
+            grid[gridCount - 1][i] = temp;
+        }
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
+
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         System.out.println("9");
-
+        int[][] temp = new int[100][100];
+        for (int i = 0; i < gridCount; i++) {
+            for (int i1 = 0; i1 < gridCount; i1++) {
+                temp[i1][i] = grid[i][gridCount - i1 - 1];
+            }
+        }
+        grid = temp;
         draw();
     }//GEN-LAST:event_jButton11ActionPerformed
 

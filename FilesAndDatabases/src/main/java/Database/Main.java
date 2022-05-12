@@ -1,8 +1,6 @@
-package libraries;
+package Database;
 
 import java.util.Scanner;
-import org.apache.derby.database.Database;
-import java.sql.*;
 
 public class Main {
 
@@ -11,6 +9,7 @@ public class Main {
         System.out.println("Input directory to search: ");
         DirectoryDump directoryDump = new DirectoryDump(scanner.nextLine());
         directoryDump.dump();
-
+        //
+        // Connection connection = DriverManager.getConnection();
     }
 }

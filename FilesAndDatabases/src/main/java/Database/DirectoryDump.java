@@ -4,6 +4,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.util.ArrayList;
 
 public class DirectoryDump {
@@ -15,7 +17,11 @@ public class DirectoryDump {
     }
 
     public void dump() {
-        files = (ArrayList<File>) FileUtils.listFiles(dir, TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+        try {
+            files = (ArrayList<File>) FileUtils.listFiles(dir, TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+        } catch (UncheckedIOException e) {
+            System.out.println(e.getCause());
+        }
     }
 
     public ArrayList<File> getFiles() {

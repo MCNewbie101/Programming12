@@ -10,6 +10,7 @@ public class Handler {
 
     public Handler () {
         connect();
+        createTable();
     }
 
     private void connect() {
@@ -21,7 +22,7 @@ public class Handler {
     }
 
     private void createTable() {
-        String TABLE_NAME = "Files";
+        String TABLE_NAME = "FILES";
         try {
             stmt = connection.createStatement();
             DatabaseMetaData dmn = connection.getMetaData();
@@ -44,8 +45,8 @@ public class Handler {
             stmt.execute(qu);
             return true;
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
-            System.out.println("Exception at execAction" + e.getLocalizedMessage());
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error Occurred", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Exception at execAction: " + e.getLocalizedMessage());
             return false;
         }
     }

@@ -22,8 +22,6 @@ public class Main {
                 extStart = file.getName().length();
             }
             int size = (int) Files.size(Path.of(file.getPath()));
-//            String st = "INSERT INTO FILES VALUES (" + "'" + file.getName() + "'," + "'" + file.getAbsolutePath() + "'," + "'" + file.getName().substring(extStart) + "'," + "'" + size + "')";
-
             String st = "INSERT INTO FILES VALUES ('" + file.getName() + "', '" + file.getAbsolutePath() + "', '" + file.getName().substring(extStart) + "', " + size + ")";
             if (handler.execAction(st)) {
                 System.out.println("Information entered");
@@ -40,5 +38,6 @@ public class Main {
             int size = rs.getInt("size");
             System.out.println(name + ", " + path + ", " + extension + ", " + size);
         }
+        handler.drop();
     }
 }

@@ -30,7 +30,7 @@ public class Handler {
             if (tables.next()) {
                 System.out.println("Table " + TABLE_NAME + " already exists");
             } else {
-                String statement = "CREATE TABLE " + TABLE_NAME + " (" + "fileName varchar(200), \n" + "path varchar(2000) primary key, \n" + "extension varchar(20), \n" + "size int)";
+                String statement = "CREATE TABLE " + TABLE_NAME + " (" + "fileName varchar(200), \n" + "path varchar(2000) primary key, \n" + "extension varchar(200), \n" + "size int)";
                 System.out.println(statement);
                 stmt.execute(statement);
             }
@@ -61,5 +61,10 @@ public class Handler {
             return null;
         }
         return resultSet;
+    }
+
+    public void drop() throws SQLException {
+        String qu = "DROP TABLE FILES";
+        stmt.execute(qu);
     }
 }
